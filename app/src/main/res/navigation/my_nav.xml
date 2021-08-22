@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/data_Barang">
+
+    <activity
+        android:id="@+id/data_Barang"
+        android:name="com.example.inventory.ui.Data_Barang"
+        android:label="activity_data_barang"
+        tools:layout="@layout/activity_data_barang" />
+    <activity
+        android:id="@+id/home2"
+        android:name="com.example.inventory.ui.Home"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <activity
+        android:id="@+id/laporan"
+        android:name="com.example.inventory.ui.Laporan"
+        android:label="activity_laporan"
+        tools:layout="@layout/activity_laporan" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.inventory.ui.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/edit_Barang"
+        android:name="com.example.inventory.ui.Edit_Barang"
+        android:label="activity_edit_barang"
+        tools:layout="@layout/activity_edit_barang" />
+    <activity
+        android:id="@+id/perhitungan"
+        android:name="com.example.inventory.ui.Perhitungan"
+        android:label="activity_perhitungan"
+        tools:layout="@layout/activity_perhitungan" />
+    <activity
+        android:id="@+id/tambah_Barang"
+        android:name="com.example.inventory.ui.Tambah_Barang"
+        android:label="activity_tambah_barang"
+        tools:layout="@layout/activity_tambah_barang" />
+    <activity
+        android:id="@+id/stok_Keluar"
+        android:name="com.example.inventory.ui.Stok_Keluar"
+        android:label="activity_stok_keluar"
+        tools:layout="@layout/activity_stok_keluar" />
+    <activity
+        android:id="@+id/stok_Masuk"
+        android:name="com.example.inventory.ui.Stok_Masuk"
+        android:label="activity_stok_masuk"
+        tools:layout="@layout/activity_stok_masuk" />
+    <activity
+        android:id="@+id/scan"
+        android:name="com.example.inventory.ui.Scan"
+        android:label="activity_scan"
+        tools:layout="@layout/activity_scan" />
+</navigation>

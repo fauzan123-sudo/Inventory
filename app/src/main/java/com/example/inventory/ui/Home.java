@@ -1,0 +1,46 @@
+package com.example.inventory.ui;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import com.example.inventory.R;
+
+import static com.example.inventory.helper.Constans.TAG_ID_USER;
+import static com.example.inventory.helper.Constans.TAG_USERNAME;
+import static com.example.inventory.helper.Constans.my_shared_preferences;
+
+public class Home extends AppCompatActivity {
+    SharedPreferences sharedpreferences;
+    Button TambahBarang, StokMasuk, StokKeluar, Laporan, Tentang, Pelanggan;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+
+        sharedpreferences = getSharedPreferences(my_shared_preferences, Context.MODE_PRIVATE);
+
+        getIntent().getStringExtra(TAG_ID_USER);
+        getIntent().getStringExtra(TAG_USERNAME);
+
+        Tentang = findViewById(R.id.tentang);
+
+        Pelanggan   = findViewById(R.id.pelanggan);
+
+        Pelanggan.setOnClickListener(view -> startActivity(new Intent(this, Pelanggan.class)));
+
+
+        Tentang.setOnClickListener(view -> startActivity(new Intent(this, Tentang.class)));
+
+    }
+
+    public void Data_Barang(View view) {
+        startActivity(new Intent(Home.this, Data_Barang.class));
+    }
+}
