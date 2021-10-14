@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -38,10 +37,8 @@ import static com.example.inventory.helper.Constans.TAG_JENIS_BARANG;
 import static com.example.inventory.helper.Constans.TAG_JUMLAH_BARANG;
 import static com.example.inventory.helper.Constans.TAG_MESSAGE;
 import static com.example.inventory.helper.Constans.TAG_NAMA_BARANG;
-import static com.example.inventory.helper.Constans.TAG_NAMA_PELANGGAN;
 import static com.example.inventory.helper.Constans.TAG_SUCCESS;
 import static com.example.inventory.helper.Constans.TAG_TANGGAL_BARANG;
-import static com.example.inventory.helper.Constans.TAMBAH_BARANG;
 import static com.example.inventory.helper.Constans.scanQrBarang;
 import static com.example.inventory.helper.Constans.success;
 import static com.example.inventory.helper.Constans.tag_json_obj;
@@ -83,9 +80,7 @@ public class Stok_Keluar extends AppCompatActivity{
         };
 
         Kembali.setOnClickListener(view -> startActivity(new Intent(Stok_Keluar.this, Home.class)));
-        Simpan.setOnClickListener(view -> {
-            SimpanStokKeluar();
-        });
+        Simpan.setOnClickListener(view -> SimpanStokKeluar());
 
         TanggalBarang.setOnClickListener(view -> new DatePickerDialog(Stok_Keluar.this,
                 date, myCalendar
@@ -154,8 +149,6 @@ public class Stok_Keluar extends AppCompatActivity{
     }
 
     private void PindaiBarang() {
-        String Barcodenya = barcode;
-
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Logging in ...");

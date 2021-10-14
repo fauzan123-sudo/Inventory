@@ -2,29 +2,21 @@ package com.example.inventory.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.example.inventory.R;
 import com.example.inventory.helper.AppController;
-import com.google.android.material.textfield.TextInputEditText;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
 
@@ -36,12 +28,11 @@ import static com.example.inventory.helper.Constans.TAG_JUMLAH_BARANG;
 import static com.example.inventory.helper.Constans.TAG_MESSAGE;
 import static com.example.inventory.helper.Constans.TAG_NAMA_BARANG;
 import static com.example.inventory.helper.Constans.TAG_QR_BARANG;
-import static com.example.inventory.helper.Constans.TAMBAH_BARANG;
 import static com.example.inventory.helper.Constans.success;
 import static com.example.inventory.helper.Constans.tag_json_obj;
 
 public class Stok_Masuk extends AppCompatActivity{
-    Button SImpan, plus, minus;
+    Button SImpan;
     EditText jumlahBarang;
     String id, NamaBarangs, JumlahBarangs, JenisBarangs, HargaBarangs, QRs;
     private final String TAG = Stok_Masuk.class.getSimpleName();
