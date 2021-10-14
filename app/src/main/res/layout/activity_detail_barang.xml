@@ -20,12 +20,11 @@
                 android:layout_column="1"
                 android:text="Nama Barang"
                 android:padding="3dip" />
-            <TextView
+            <EditText
                 android:padding="3dip"
                 android:id="@+id/nama_barang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/nama_barang"
                 />
         </TableRow>
 
@@ -35,12 +34,12 @@
                 android:layout_column="1"
                 android:text="Harga Barang"
                 android:padding="3dip" />
-            <TextView
+            <EditText
                 android:padding="3dip"
                 android:id="@+id/harga_barang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/harga_barang"
+
                 />
         </TableRow>
 
@@ -50,12 +49,12 @@
                 android:layout_column="1"
                 android:text="Jenis Barang"
                 android:padding="3dip" />
-            <TextView
+            <EditText
                 android:padding="3dip"
                 android:id="@+id/jenis_barang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/jenis_barang" />
+                 />
         </TableRow>
 
         <TableRow
@@ -64,12 +63,11 @@
                 android:layout_column="1"
                 android:text="Jumlah Barang"
                 android:padding="3dip" />
-            <TextView
+            <EditText
                 android:padding="3dip"
                 android:id="@+id/jumlah_barang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/jumlah_barang"
                 />
         </TableRow>
 
@@ -100,6 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/barcode_atau_qr_code"
+
                 />
         </TableRow>
 
@@ -113,5 +112,15 @@
         android:text="@string/kembali"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/update"
+        android:text="@string/update"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        />
 
 </LinearLayout>

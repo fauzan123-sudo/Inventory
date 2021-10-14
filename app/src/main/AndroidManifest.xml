@@ -16,7 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Inventory"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.Tambah_Pelanggan"></activity>
+        <activity android:name=".ui.List_Barang"></activity>
+        <activity android:name=".ui.GagalScan" />
+        <activity android:name=".ui.Tambah_Pelanggan" />
         <activity android:name=".ui.Pelanggan" />
         <activity android:name=".ui.Detail_Barang" />
         <activity android:name=".ui.Tentang" />

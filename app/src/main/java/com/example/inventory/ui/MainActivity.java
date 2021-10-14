@@ -93,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
                         JSONObject jObj = new JSONObject(response);
                         success = jObj.getInt(TAG_SUCCESS);
 
-                        // Check for error node in json
                         if (success == 1) {
                             String username1 = jObj.getString(TAG_USERNAME);
                             String id        = jObj.getString(TAG_ID_USER);

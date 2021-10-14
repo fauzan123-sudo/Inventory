@@ -7,11 +7,17 @@
     <string name="barcode_atau_qr_code">Barcode atau Qr code</string>
     <string name="harga_barang">Harga Barang</string>
     <string name="tanggal">Tanggal</string>
-    <string name="todo">TODO</string>
-    <string name="update">Update</string>
     <string name="tentang">Apliaksi Stok Barang V.1.0</string>
     <string name="kembali">Kembali</string>
     <string name="panduan">Panduan</string>
     <string name="nama_pelanggan">Nama Pelanggan</string>
     <string name="no_telepon">No Telepon</string>
+    <string name="floating">TODO</string>
+    <string name="update">Update</string>
+    <string name="cari">Cari</string>
+    <string name="type_name">Type Name</string>
+    <string name="laporan">Laporan</string>
+    <string name="aksi">aksi</string>
+    <string name="waktu">Waktu</string>
+    <string name="_12">12</string>
 </resources>

@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_qr"
             android:layout_alignParentEnd="true"
-            android:contentDescription="@string/todo" />
+            />
     </RelativeLayout>
 
     <RelativeLayout

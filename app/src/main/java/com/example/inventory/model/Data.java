@@ -1,17 +1,36 @@
 package com.example.inventory.model;
 
 public class Data {
-    private String id_barang, nama_barang, jenis_barang, jumlah_barang, harga_barang;
+    private String id_barang, nama_barang, jenis_barang, jumlah_barang, harga_barang, qr_barang, tanggal_barang;
 
     public Data() {
     }
-    public Data(String id_barang, String nama_barang, String jenis_barang, String jumlah_barang, String harga_barang) {
+    public Data(String id_barang, String nama_barang, String jenis_barang, String jumlah_barang, String harga_barang,
+                String qr_barang, String tanggal_barang) {
         this.id_barang      = id_barang;
         this.nama_barang    = nama_barang;
         this.jenis_barang   = jenis_barang;
         this.jumlah_barang  = jumlah_barang;
         this.harga_barang   = harga_barang;
+        this.qr_barang      = qr_barang;
+        this.tanggal_barang = tanggal_barang;
 
+    }
+
+    public String getTanggal_barang() {
+        return tanggal_barang;
+    }
+
+    public void setTanggal_barang(String tanggal_barang) {
+        this.tanggal_barang = tanggal_barang;
+    }
+
+    public String getQr_barang() {
+        return qr_barang;
+    }
+
+    public void setQr_barang(String qr_barang) {
+        this.qr_barang = qr_barang;
     }
 
     public String getHarga_barang() {

@@ -45,13 +45,13 @@ public class Pelanggan extends AppCompatActivity {
         setContentView(R.layout.activity_pelanggan);
         pd = new ProgressDialog(this);
         modelPelanggans = new ArrayList<>();
-        mRecyclerview = findViewById(R.id.listPelanggan);
-        mManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+        mRecyclerview   = findViewById(R.id.listPelanggan);
+        mManager        = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         mRecyclerview.setLayoutManager(mManager);
-        mAdapter = new AdapterPelanggan(modelPelanggans, this);
+        mAdapter        = new AdapterPelanggan(modelPelanggans, this);
         mRecyclerview.setAdapter(mAdapter);
         setUpSwipe();
-        Tambah      = findViewById(R.id.tambah);
+        Tambah          = findViewById(R.id.tambah);
         Tambah.setOnClickListener(view->
                 startActivity(new Intent(this, Tambah_Pelanggan.class))
                 );

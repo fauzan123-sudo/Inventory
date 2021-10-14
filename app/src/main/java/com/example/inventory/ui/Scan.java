@@ -29,11 +29,11 @@ public class Scan extends AppCompatActivity {
         mCodeScanner = new CodeScanner(this, scannerView);
         mCodeScanner.setDecodeCallback(result -> runOnUiThread(() -> {
             String hasilScan = result.getText();
-            Intent intent = new Intent(Scan.this,Tambah_Barang.class);
+            Intent intent = new Intent(Scan.this,Stok_Keluar.class);
             intent.putExtra(TAG_HASIL_SCAN, hasilScan);
             finish();
             startActivity(intent);
-            Toast.makeText(Scan.this, "hasilnya"+ result, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(Scan.this, ""+ result, Toast.LENGTH_SHORT).show();
         }));
         scannerView.setOnClickListener(view -> mCodeScanner.startPreview());
     }

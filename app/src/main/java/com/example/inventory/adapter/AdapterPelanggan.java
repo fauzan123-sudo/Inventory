@@ -43,7 +43,7 @@ import static com.example.inventory.ui.Pelanggan.mRecyclerview;
 public class AdapterPelanggan extends RecyclerView.Adapter<AdapterPelanggan.ViewHolder> {
     private final List<ModelPelanggan> mItems;
     private final Context context;
-    private ProgressDialog dialog;
+
 
     public AdapterPelanggan(List<ModelPelanggan> modelPelanggans, Context context) {
         this.mItems = modelPelanggans;

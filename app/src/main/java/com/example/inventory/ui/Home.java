@@ -30,7 +30,12 @@ public class Home extends AppCompatActivity {
         getIntent().getStringExtra(TAG_USERNAME);
 
         Tentang = findViewById(R.id.tentang);
-
+        StokKeluar = findViewById(R.id.stok_Keluar);
+        StokKeluar.setOnClickListener(view -> startActivity(new Intent(Home.this, Scan.class)));
+        StokMasuk = findViewById(R.id.stok_Masuk);
+        StokMasuk.setOnClickListener(view -> startActivity(new Intent(Home.this, List_Barang.class)));
+        Laporan= findViewById(R.id.laporan);
+        Laporan.setOnClickListener(view -> startActivity(new Intent(Home.this, Laporan.class)));
         Pelanggan   = findViewById(R.id.pelanggan);
 
         Pelanggan.setOnClickListener(view -> startActivity(new Intent(this, Pelanggan.class)));

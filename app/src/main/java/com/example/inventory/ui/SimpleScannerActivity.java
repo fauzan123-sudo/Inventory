@@ -48,7 +48,7 @@ public class SimpleScannerActivity extends Activity implements ZXingScannerView.
     public void handleResult(Result rawResult) {
 
         String result = rawResult.getText();
-        Intent intent = new Intent(this, Edit_Barang.class);
+        Intent intent = new Intent(this, Stok_Keluar.class);
         intent.putExtra(TAG_SCAN, result);
         intent.putExtra("id", id);
         Toast.makeText(this, ""+id, Toast.LENGTH_SHORT).show();

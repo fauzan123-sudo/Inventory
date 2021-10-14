@@ -35,7 +35,7 @@ import static com.example.inventory.helper.Constans.TAMBAH_BARANG;
 import static com.example.inventory.helper.Constans.success;
 import static com.example.inventory.helper.Constans.tag_json_obj;
 
-public class Tambah_Barang extends AppCompatActivity {
+public class Tambah_Barang extends AppCompatActivity implements ExampleDialog.ExampleDialogListener{
 
     TextInputEditText NamaBarang, JenisBarang, JumlahBarang, HargaBarang;
     public  EditText Tanggal;
@@ -79,24 +79,30 @@ public class Tambah_Barang extends AppCompatActivity {
         hasilScan = getIntent().getStringExtra(TAG_HASIL_SCAN);
         QRCode.setText(hasilScan);
 
-        QR.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ScanFragment exampleDialog = new ScanFragment();
-                exampleDialog.show(getSupportFragmentManager(), "example dialog");
-            }
+        QR.setOnClickListener(view -> {
+//            ScanFragment exampleDialog = new ScanFragment();
+//            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+            openDialog();
         });
         SImpan.setOnClickListener(View->{
             String namaBarangs      = Objects.requireNonNull(NamaBarang.getText()).toString().trim();
             String hargaBarangs     = Objects.requireNonNull(HargaBarang.getText()).toString().trim();
             String jenisBarangs     = Objects.requireNonNull(JenisBarang.getText()).toString().trim();
-            String  jumlahBarangs   = Objects.requireNonNull(JumlahBarang.getText()).toString().trim();
+            String jumlahBarangs    = Objects.requireNonNull(JumlahBarang.getText()).toString().trim();
             String QRBarangs        = QRCode.getText().toString().trim();
             String tanggalBarangs   = Tanggal.getText().toString().trim();
             TambahData(namaBarangs, hargaBarangs, jenisBarangs, jumlahBarangs, QRBarangs, tanggalBarangs);
-
         });
+    }
 
+    public void openDialog() {
+        ExampleDialog exampleDialog = new ExampleDialog();
+        exampleDialog.show(getSupportFragmentManager(), "example dialog");
+    }
+
+    @Override
+    public void applyTexts(String hasil) {
+        QRCode.setText(hasil);
     }
 
     private void updateLabel() {
@@ -110,13 +116,10 @@ public class Tambah_Barang extends AppCompatActivity {
         StringRequest strReq = new StringRequest(Request.Method.POST, TAMBAH_BARANG,
                 response -> {
                     Log.d(TAG, "Response: " + response);
-
                     try {
                         JSONObject jObj = new JSONObject(response);
                         success = jObj.getInt("success");
-
                         if (success == 1) {
-
                             Toast.makeText(Tambah_Barang.this, "berhasil!!", Toast.LENGTH_LONG).show();
                             startActivity(new Intent(Tambah_Barang.this, Data_Barang.class));
 
@@ -144,11 +147,16 @@ public class Tambah_Barang extends AppCompatActivity {
                 params.put("tanggal", tanggalBarangs);
                 return params;
             }
-
         };
-
         AppController.getInstance().addToRequestQueue(strReq, tag_json_obj);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(this, Data_Barang.class));
+        finish();
+
+    }
 
 }
